@@ -16,7 +16,13 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should be empty on init', function () {
+    expect(scope.todos.length).toBe(0);
   });
+
+  it('size of 1 after we add one', function () {
+    scope.todos.push('test1');
+    expect(scope.todos.length).toBe(1);
+  });
+
 });
